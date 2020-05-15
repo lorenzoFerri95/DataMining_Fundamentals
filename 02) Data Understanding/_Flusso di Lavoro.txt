@@ -1,0 +1,20 @@
+baseTrain  -->  file iniziale fornito
+
+Test_Set; Training_Set  -->  files con attributi rielaborati (usati da noi come files di base su cui lavorare)
+
+01_Distributions_Statistics.ipynb
+
+Training_distributionStatistic  -->  training set dopo l'eliminazione di alcuni attributi superflui
+Test_DU  -->  test set finale del processo di Data Understanding
+
+02_Assessing_Data_Quality.ipynb
+
+trainingsetnomissingvalue  -->  training set con missing value fillati
+
+03_Correlation_Scatter_Scaling.ipynb
+
+Training_DU  -->  training set finale del processo di Data Understanding
+
+04_Transformations.ipynb
+
+Training_DU_Clustering  -->  training preparato per la Cluster Analysis

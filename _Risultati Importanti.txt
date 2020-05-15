@@ -1,0 +1,7 @@
+1- la percentuale di IsBadBuy aumenta all'aumentare dell'età del veicolo
+(vedi 01_Distribution_Statistics)
+2- gli outliers di prezzo, cioè i veicoli con costo esageratamente alto, sono per la maggior parte BadBuy
+(vedi 03_Correlation_Scatters  oppure anche  01_DBSCAN_Perform_Validation)
+3- il costo di acquisto dei veicoli si aggira tra i 3.000 e i 12.000 dollari. tranne che per i
+veicoli con miglia percorse nel contachilometri superiore a 100.000: in quei casi il costo del
+veicolo sta tra i 3.000 e i 6.000 dollari

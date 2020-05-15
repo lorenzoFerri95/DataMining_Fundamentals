@@ -1,0 +1,12 @@
+nella cartella "Michele" ci sono i file CSV di base che sono stati importati e rielaborati:
+dove sono state modificate le colonne "PurchDate", "Model" e "SubModel".
+
+in questa cartella invece ci sono i files effettivi che vengono usati per l'analisi:
+Training_Set e Test_Set
+rispetto a quelli nella cartella "Michele" ho modificato solo l'intestazione di alune colonne
+per renderle coerenti con quello che abbiamo scritto su overleaf
+
+RealModel = Model
+RealSubModel = SubModel
+Model = Engine
+SubModel = SubModelSpecifics

@@ -1,0 +1,41 @@
+ho diviso l'attributo SubModel generando 4 nuovi attributi:  SubModel; Doors; Level; 
+Submodel: sottomodello
+Doors: numero di porte della macchina
+EngDisp:  Engine Displacement (numero di cilindri del motore)
+EngCap: Engine Capacity (cilindrata del motore)
+WheelDrive: numero di ruote motrici
+
+nei submodel c'erano ripetuti i Trim,
+li ho eliminati se già presenti nella colonna dell'attributo Trim,
+oppure li ho inseriti nella colonna dell'attributo trim se in essa mancavano.
+Se era presente in entrambe le colonne ma risultava discordante ho dato la priorità al valore già presente nella colonna Trim
+perchè l'assetto del modello standard potrebbe essere stato modificato successivamente
+
+id 23403, valori non coerenti nel submodel li ho sistemati
+(mancava la L a litri)
+
+id 59 checkka
+
+abbiamo ricavato le cilindrate dagli attributi model e submodel
+
+diversi valori dei litri inseriti male:  
+01.08 = 1.8L   02.05 = 2.5L  2.    2.0   ecc...  li abbiamo corretti tutti
+
+wheelTypeId   0.0   eliminato
+
+
+eliminato  AUTO e MANUAL (perchè già presente nella Trasmission)
+
+
+
+ROBERTA:
+
+1)	Suddiviso la colonna “Model” in 7 colonne (Model +6);
+2)	Eliminato la colonna 6 poiché conteneva solo un valore “S”, che era uguale al trim;
+3)	Prese le prime due nuove colonne (dopo il model), copiate e selezionato solo i valori 1.5l, 2.0l etc, ho tenuto anche i valori “2.” E simili poiché possono essere semplicemente incompleti DISCUTERNE. (per ora abbiamo 47228 valori mancanti per quanto riguarda questo dato)
+4)	 Presa la quarta nuova colonna creata con lo splittamento e fatto lo stesso, conservando sempre i valori come “2.” Attualmente sono presenti 47042 missing value.
+5)	Colonna 5 (sempre considerando quelle nuove create, senza tener conto della colonna model) sono presenti i valori “/”, “2.”, “3.” ,”D”, “DO”, “N”, “NA” con 46991 missing value. Mantengo i “2.” “3.” Come precedentemente fatto, essendo solo 5 valori (ID 26437, 34851, 49676, 58884, 71378) ed essendo il campo “cilindrata”, dei relativi dati, vuoto li trasferisco, per poi decidere insieme cosa farne. Missing value 47037.
+6)	Ora creo la colonna per i V6 e V8, comincio dalla prima colonna duplicandola e prendendo solo i valori, faccio lo stesso con la seconda e poi le unisco. Unite le prime due colonne sono presenti 40137 missing value.
+7)	Colonna 4, dando una veloce occhiata ai valori diversi da v6 e v8, ed essendo assenti i dati relativi alle ruote motrici, decido di cancellare tutti i valori diversi da v6 e v8 poiché non si riferiscono al trim. Conservo anche il valore V poiché ne sono presenti 941 in quanto potrebbero essere incompleti, però comunque inutili, quindi probabilmente da cancellare. Missing value 34783=0 e 705 V che sono diminuite poiché sono stati sostituiti da valori di v6 e v8 che erano presenti nell’altra colonna).
+8)	Passo alle ruote motrici, prima colonna (DUBBI SUI DUE VALORE CON AWD, ma li ho cancellati) seconda e terza colonna, sempre copiandole e poi unificandole risultano 46867 missing value.
+9)	Creata un’unica colonna con tutti i restanti valori.
